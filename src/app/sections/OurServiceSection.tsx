@@ -31,7 +31,7 @@ export default function OurServiceSection() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 grid-rows-6 sm:grid-rows-4 lg:grid-rows-2 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 grid-rows-6 sm:grid-rows-3 lg:grid-rows-2 gap-5">
         <MediumServiceCard title="Graphic Design" description="Urna auctor sed dictum libero vestibulum orci a imperdiet quisque nullam nam." iconElement={<FaPencilRuler />} />
 
         <div className="w-full bg-blue-600 row-span-2 rounded-2xl px-8 pt-8 border-[1.5px] border-slate-700 duration-300 hover:border-blue-500 flex flex-col justify-between">
