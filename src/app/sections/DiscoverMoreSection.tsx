@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import React from "react";
 
 type DiscoverMoreSectionProps = {
@@ -12,7 +13,7 @@ export default function DiscoverMoreSection({ description, title }: DiscoverMore
         <h2 className="text-3xl md:text-4xl">{title}</h2>
         <p>{description}</p>
 
-        <button className="button-pri">Discover More</button>
+        <Button className="text-sm w-fit px-6 py-3">Discover More</Button>
       </div>
     </section>
   );

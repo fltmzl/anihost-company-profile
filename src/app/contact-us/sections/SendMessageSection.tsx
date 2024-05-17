@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
@@ -47,9 +48,7 @@ export default function SendMessageSection() {
             <Textarea id="message" name="message" placeholder="Message" className="bg-slate-700 border-slate-600" />
           </div>
 
-          <button className="button-pri" type="submit">
-            Send Message
-          </button>
+          <Button type="submit">Send Message</Button>
         </form>
       </div>
     </section>
