@@ -9,6 +9,7 @@ import logoBlue from "../../../public/logo/logo-blue.svg";
 import { MdOutlineMiscellaneousServices } from "react-icons/md";
 import { FaServer, FaLaptopCode, FaChevronDown } from "react-icons/fa";
 import logoWhite from "../../../public/logo/logo-white.svg";
+import { Button } from "@/components/ui/button";
 
 const navbarItems = [
   {
@@ -126,7 +127,7 @@ export default function Navbar() {
         </ul>
 
         <div>
-          <button className="my-3 button-pri">Get Started</button>
+          <Button className="px-6 py-2 w-fit text-xs font-normal">Get Started</Button>
         </div>
       </div>
     </nav>

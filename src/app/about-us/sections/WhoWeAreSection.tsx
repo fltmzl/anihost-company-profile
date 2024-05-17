@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import React from "react";
 
@@ -10,7 +11,7 @@ export default function WhoWeAreSection() {
         <p className="text-sm md:text-base text-slate-400">
           Parturient a tempor nam viverra luctus rhoncus taciti hac. Sapien mattis eu luctus montes volutpat nec odio. Posuere suspendisse commodo tempus molestie quis praesent curae sagittis placerat ridiculus tellus.
         </p>
-        <button className="button-pri">Learn More</button>
+        <Button className="w-fit">Learn More</Button>
       </div>
 
       <div className="md:basis-1/2 relative aspect-video">
