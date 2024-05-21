@@ -79,7 +79,7 @@
   }
 
   h6 {
-    @apply text-blue-400 text-xs lg:text-[13px] font-semibold;
+    @apply text-blue-400 text-xs lg:text-[13px] font-semibold uppercase;
   }
 }
 
@@ -94,6 +94,10 @@
 
   .input-group {
     @apply grid w-full items-center gap-1.5;
+  }
+
+  .number-card {
+    @apply inline-block px-[10px] py-1 text-[11px] font-semibold border-2 border-blue-500 rounded-md relative after:content-[''] after:absolute after:bg-slate-300 after:w-full after:h-full after:top-1.5 after:-left-1.5 after:-z-10 after:rounded-sm;
   }
 
   div.custom-scroll::-webkit-scrollbar {

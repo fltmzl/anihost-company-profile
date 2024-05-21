@@ -3,23 +3,30 @@ import PagesTitleHeader from "../components/PagesTitleHeader";
 import HostingServiceList from "./sections/HostingServiceList";
 import DiscoverMoreSection from "../sections/DiscoverMoreSection";
 import SoftwareServiceList from "./sections/SoftwareServiceList";
-import OurTechnologiesSection from "./sections/OurTechnologiesSection";
+import OurTechnologiesSection from "../sections/OurTechnologiesSection";
+import fetcher from "@/lib/fetcher";
 
-export default function Services() {
+const getData = async () => {
+  return fetcher({ endpoint: "/pages/services" });
+};
+
+export default async function Services() {
+  const data: AllService = await getData();
+  const { pageInfo, cta, tools, hostingProducts, softwareProducts } = data;
+
   return (
     <main>
-      <PagesTitleHeader title="All Services" description="Lorem ipsum dolor sit amet consectetur adipisicing." />
+      <PagesTitleHeader title={pageInfo.title} description={pageInfo.description} />
 
-      <HostingServiceList />
+      <HostingServiceList items={hostingProducts} />
 
-      <DiscoverMoreSection
-        title="Our performance is your success. Our passion is innovation. Our expertise is unmatched. We get you more"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
-      />
+      <DiscoverMoreSection title={cta[0].title} description={cta[0].description} buttonLabel={cta[0].url} />
 
-      <OurTechnologiesSection />
+      <SoftwareServiceList items={softwareProducts} />
 
-      <SoftwareServiceList />
+      <OurTechnologiesSection items={tools} />
+
+      <DiscoverMoreSection title={cta[1].title} description={cta[1].description} buttonLabel={cta[1].url} />
     </main>
   );
 }

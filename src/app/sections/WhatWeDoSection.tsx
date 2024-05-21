@@ -1,30 +1,27 @@
 import React from "react";
 import LargeServiceCard from "../components/LargeServiceCard";
+import { constants } from "../utils/constants";
 
-export default function WhatWeDoSection() {
+type WhatWeDoSectionProps = {
+  items: WhatWeDo[];
+};
+
+export default function WhatWeDoSection({ items }: WhatWeDoSectionProps) {
   return (
-    <section className="container py-28 px-5">
+    <section className="container py-28">
       <div className="flex flex-col items-center mb-10">
-        <h6 className="mb-6">WHAT WE DO</h6>
-        <h2 className="max-w-lg text-center">Let us change the way you think about technology.</h2>
+        <h6 className="mb-6" data-aos="fade-up" data-aos-delay="150">
+          WHAT WE DO
+        </h6>
+        <h2 className="max-w-lg text-center" data-aos="fade-up">
+          Bring your ideas to life. Discover a New Perspective on Technology.
+        </h2>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-        <LargeServiceCard
-          title="Mobile Application Development"
-          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos dignissimos earum iusto qui atque ad optio, assumenda quaerat. Ipsum, velit?"
-          imageSrc="/images/mobile-app.png"
-        />
-        <LargeServiceCard
-          title="Web Application Development"
-          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos dignissimos earum iusto qui atque ad optio, assumenda quaerat. Ipsum, velit?"
-          imageSrc="/images/mobile-app.png"
-        />
-        <LargeServiceCard
-          title="Digital Marketing & Branding"
-          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos dignissimos earum iusto qui atque ad optio, assumenda quaerat. Ipsum, velit?"
-          imageSrc="/images/mobile-app.png"
-        />
+        {items.map((item) => (
+          <LargeServiceCard key={item.id} title={item.title} description={item.description} imageSrc={`${constants.IMAGE_BASE_URL}/${item.image}`} />
+        ))}
       </div>
     </section>
   );

@@ -8,7 +8,6 @@ import Image from "next/image";
 import logoBlue from "../../../public/logo/logo-blue.svg";
 import { MdOutlineMiscellaneousServices } from "react-icons/md";
 import { FaServer, FaLaptopCode, FaChevronDown } from "react-icons/fa";
-import logoWhite from "../../../public/logo/logo-white.svg";
 import { Button } from "@/components/ui/button";
 
 const navbarItems = [
@@ -59,6 +58,7 @@ export default function Navbar() {
   };
 
   return (
+    // <nav className={twMerge("flex items-center px-5 justify-between fixed w-full z-20 duration-500", scrollY > 200 && "bg-slate-900 shadow-xl")}>
     <nav className={twMerge("flex items-center px-5 justify-between fixed w-full z-20 duration-500", scrollY > 200 && "bg-slate-900 shadow-xl")}>
       <div>
         <a href="/" className="font-bold text-xl">
@@ -127,7 +127,7 @@ export default function Navbar() {
         </ul>
 
         <div>
-          <Button className="px-6 py-2 w-fit text-xs font-normal">Get Started</Button>
+          <Button className="px-6 py-2 w-fit text-xs font-normal uppercase">Support</Button>
         </div>
       </div>
     </nav>

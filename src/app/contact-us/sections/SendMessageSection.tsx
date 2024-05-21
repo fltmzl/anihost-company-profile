@@ -6,11 +6,11 @@ import React from "react";
 
 export default function SendMessageSection() {
   return (
-    <section className="container pt-5 pb-24 md:relative md:-top-32">
+    <section className="container pt-5 pb-24 md:relative md:-top-32" data-aos="fade-up">
       <div className="w-full max-w-4xl mx-auto bg-slate-800 rounded-2xl p-7 md:p-16">
         <div className="text-center">
           <h2 className="mb-3">Send us a message</h2>
-          <p className="mb-5 text-slate-400 text-xs md:text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+          <p className="mb-5 text-slate-400 text-xs md:text-sm">We&apos;d love to hear from you! Whether you have a question, a suggestion, or just want to say hi, send us a message. Let&apos;s stay connected!</p>
         </div>
 
         <form className="grid gap-5">

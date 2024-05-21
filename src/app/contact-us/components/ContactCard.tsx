@@ -7,11 +7,12 @@ type ContactCardProps = {
   secondDescription?: string;
   iconElement: React.ReactElement;
   variant?: "primary" | "secondary";
+  animationDelay?: number;
 };
 
-export default function ContactCard({ title, description, secondDescription, iconElement, variant = "primary" }: ContactCardProps) {
+export default function ContactCard({ title, description, secondDescription, iconElement, variant = "primary", animationDelay }: ContactCardProps) {
   return (
-    <div className={twMerge("w-full lg:max-w-sm rounded-2xl p-8", variant === "primary" ? "bg-gradient-to-br from-blue-500 to-blue-700" : "bg-slate-800")}>
+    <div className={twMerge("w-full lg:max-w-sm rounded-2xl p-8", variant === "primary" ? "bg-gradient-to-br from-blue-500 to-blue-700" : "bg-slate-800")} data-aos="fade-up" data-aos-delay={animationDelay}>
       <div className={twMerge("text-4xl mb-7 md:mb-16", variant === "primary" ? "text-white" : "text-blue-500")}>{iconElement}</div>
 
       <div>

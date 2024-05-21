@@ -1,21 +1,27 @@
+import { constants } from "@/app/utils/constants";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import React from "react";
 
-export default function WhoWeAreSection() {
+type WhoWeAreSectionProps = {
+  title: string;
+  text: string;
+  description: string;
+  image: string;
+};
+
+export default function WhoWeAreSection({ title, text, description, image }: WhoWeAreSectionProps) {
   return (
     <section className="container flex flex-col md:flex-row pt-10 lg:pt-32 pb-20 gap-5 md:gap-0">
-      <div className="md:basis-1/2 p-5 space-y-5">
-        <h6>WHO WE ARE</h6>
-        <h2 className="text-2xl md:text-3xl lg:text-4xl">Delivering IT solutions that enable you to work smarter.</h2>
-        <p className="text-sm md:text-base text-slate-400">
-          Parturient a tempor nam viverra luctus rhoncus taciti hac. Sapien mattis eu luctus montes volutpat nec odio. Posuere suspendisse commodo tempus molestie quis praesent curae sagittis placerat ridiculus tellus.
-        </p>
+      <div className="md:basis-1/2 p-5 lg:pr-10 space-y-5" data-aos="fade-right">
+        <h6>{title}</h6>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl">{text}</h2>
+        <p className="text-sm md:text-base text-slate-400">{description}</p>
         <Button className="w-fit">Learn More</Button>
       </div>
 
-      <div className="md:basis-1/2 relative aspect-video">
-        <Image src="/images/about-img1.jpg" alt="about-us" fill className="rounded-2xl object-cover" />
+      <div className="md:basis-1/2 relative aspect-video" data-aos="fade-up">
+        <Image src={`${constants.IMAGE_BASE_URL}/${image}`} alt="about-us" fill className="rounded-2xl object-cover object-left" />
       </div>
     </section>
   );

@@ -45,18 +45,26 @@ const frameworks = [
   },
 ];
 
-export default function OurTechnologiesSection() {
+type OurTechnologiesSectionProps = {
+  items: Tool[];
+};
+
+export default function OurTechnologiesSection({ items }: OurTechnologiesSectionProps) {
   return (
     <section className="container">
       <div className="py-10">
         <div className="text-center">
-          <h6 className="uppercase mb-5">Technologies</h6>
-          <h2>Our Technologies & Frameworks</h2>
+          <h6 className="uppercase mb-5" data-aos="fade-up">
+            Technologies
+          </h6>
+          <h2 data-aos="fade-up" data-aos-delay="100">
+            Our Technologies & Frameworks
+          </h2>
         </div>
 
         <div className="mb-5 mt-14 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-5 gap-y-10">
-          {frameworks.map((framework) => (
-            <FrameworkCard key={framework.title} title={framework.title} iconElement={framework.iconElement} />
+          {items.map((framework, index) => (
+            <FrameworkCard key={framework.id} title={framework.name} iconImage={framework.image} animationDelay={index * 100} />
           ))}
         </div>
       </div>

@@ -5,32 +5,69 @@ import { IoMdMail } from "react-icons/io";
 import ContactCard from "../components/ContactCard";
 import { MdMarkEmailRead, MdMessage } from "react-icons/md";
 
-export default function ContactInfoSection() {
+type ContactInfoSectionProps = {
+  title: string;
+  text: string;
+  description: string;
+  image?: string;
+  email: string;
+  address: string;
+  phone: string;
+  linkedin: string;
+  instagram: string;
+  fax: string;
+};
+
+export default function ContactInfoSection({ title, description, image, text, address, email, phone, fax, instagram, linkedin }: ContactInfoSectionProps) {
+  const contacts = [
+    {
+      title: "Head Office",
+      description: address,
+      iconElement: <FaLocationDot />,
+    },
+    {
+      title: "Call Us",
+      description: `Phone : ${phone}`,
+      secondDescription: `Faq: ${fax}`,
+      iconElement: <FaPhoneVolume />,
+    },
+    {
+      title: "Email Us",
+      description: email,
+      iconElement: <MdMarkEmailRead />,
+    },
+    {
+      title: "Free Consultation",
+      description: `Whatsapp: ${phone}`,
+      iconElement: <MdMessage />,
+    },
+  ];
+
   return (
     <div className="container py-20 flex flex-col lg:flex-row justify-between gap-8">
       <div className="lg:basis-5/12 space-y-5 pr-16">
-        <div className="space-y-5">
-          <h6>GET IN TOUCH</h6>
-          <h2>Don&apos;t hesitate to contact us for more information.</h2>
-          <p className="text-sm text-slate-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+        <div className="space-y-5" data-aos="fade-right">
+          <h6>{title}</h6>
+          <h2>{text}</h2>
+          <p className="text-sm text-slate-400">{description}</p>
         </div>
 
         <div className="w-full border-b border-slate-700 py-2"></div>
 
-        <div className="space-y-5">
+        <div className="space-y-5" data-aos="fade-right" data-aos-delay="100">
           <h3 className="text-xl md:text-2xl font-semibold">Follow our social network</h3>
-          <p className="text-sm text-slate-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+          <p className="text-sm text-slate-400">Stay connected with us! Follow our social media channels for the latest updates, exclusive content, and behind-the-scenes insights.</p>
 
           <div className="flex gap-2">
-            <a href="#">
+            <a href={linkedin} target="_blank">
               <FaLinkedin className="size-10 bg-blue-600 p-2 rounded-sm grid place-content-center hover:bg-blue-500 duration-300" />
             </a>
 
-            <a href="#">
+            <a href={instagram} target="_blank">
               <AiFillInstagram className="size-10 bg-blue-600 p-2 rounded-sm grid place-content-center hover:bg-blue-500 duration-300" />
             </a>
 
-            <a href="#">
+            <a href={`mailto:${email}`} target="_blank">
               <IoMdMail className="size-10 bg-blue-600 p-2 rounded-sm grid place-content-center hover:bg-blue-500 duration-300" />
             </a>
           </div>
@@ -38,13 +75,17 @@ export default function ContactInfoSection() {
       </div>
 
       <div className="lg:basis-7/12 grid md:grid-cols-2 gap-4">
-        <ContactCard iconElement={<FaLocationDot />} title="Head Office" description="Jl. Dr. Wahidin No.213K, Kaliwiru" secondDescription="Semarang - Indonesia" variant="primary" />
-
-        <ContactCard iconElement={<MdMarkEmailRead />} title="Email Us" description="support@yourdomain.tld" secondDescription="hello@yourdomain.tld" variant="secondary" />
-
-        <ContactCard iconElement={<FaPhoneVolume />} title="Call Us" description="Phone : +6221.2002.2012" secondDescription="Fax : +6221.2002.2013" variant="secondary" />
-
-        <ContactCard iconElement={<MdMessage />} title="Free Consultation" description="Phone: +6221.2002.2012" secondDescription="Fax : +6221.2002.2013" variant="secondary" />
+        {contacts.map((contact, index) => (
+          <ContactCard
+            key={contact.title}
+            iconElement={contact.iconElement}
+            title={contact.title}
+            description={contact.description}
+            secondDescription={contact.secondDescription}
+            variant={index === 0 ? "primary" : "secondary"}
+            animationDelay={index * 100}
+          />
+        ))}
       </div>
     </div>
   );

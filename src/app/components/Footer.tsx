@@ -90,21 +90,21 @@ export default function Footer() {
   ];
   return (
     <footer className="text-white">
-      <div className="bg-[#1B293B] p-5 md:flex md:gap-12 md:pt-10 md:pb-14 xl:px-12 xl:gap-28 min-[1440px]:px-[7%]">
+      <div className="bg-slate-900 p-5 md:px-10 py-20 md:flex md:gap-12 xl:gap-28">
         <div className="pt-4 md:w-1/3">
           <Image src="/logo.svg" alt="Anihost logo" width={120} height={120} loading="lazy" />
-          <p className="mt-4 text-sm">Mollis duis conubia phasellus iaculis hendrerit taciti. Ligula morbi velit facilisis imperdiet si suscipit tristique netus cursus.</p>
+          <p className="mt-4 text-sm">Connect with us for the latest updates and exclusive offers. We value your feedback and support.</p>
           <div className="flex gap-1.5 mt-4">
-            <Link href="/" className="bg-[#2B64F8] w-8 h-8 flex items-center justify-center rounded-sm hover:bg-[#0494FC] hover:scale-[1.2] ease-[cubic-bezier(0.47,2.02,.31,-.36)] duration-500 transition-all">
+            <Link href="/" className="bg-[#2B64F8] w-8 h-8 flex items-center justify-center rounded-sm hover:bg-[#0494FC] hover:scale-[1.2] duration-500 transition-all">
               <FaFacebookF color="white" />
             </Link>
-            <Link href="/" className="bg-[#2B64F8] w-8 h-8 flex items-center justify-center rounded-sm hover:bg-[#0494FC] hover:scale-[1.2] ease-[cubic-bezier(0.47,2.02,.31,-.36)] duration-500 transition-all">
+            <Link href="/" className="bg-[#2B64F8] w-8 h-8 flex items-center justify-center rounded-sm hover:bg-[#0494FC] hover:scale-[1.2] duration-500 transition-all">
               <FaInstagram color="white" />
             </Link>
-            <Link href="/" className="bg-[#2B64F8] w-8 h-8 flex items-center justify-center rounded-sm hover:bg-[#0494FC] hover:scale-[1.2] ease-[cubic-bezier(0.47,2.02,.31,-.36)] duration-500 transition-all">
+            <Link href="/" className="bg-[#2B64F8] w-8 h-8 flex items-center justify-center rounded-sm hover:bg-[#0494FC] hover:scale-[1.2] duration-500 transition-all">
               <FaTwitter color="white" />
             </Link>
-            <Link href="/" className="bg-[#2B64F8] w-8 h-8 flex items-center justify-center rounded-sm hover:bg-[#0494FC] hover:scale-[1.2] ease-[cubic-bezier(0.47,2.02,.31,-.36)] duration-500 transition-all">
+            <Link href="/" className="bg-[#2B64F8] w-8 h-8 flex items-center justify-center rounded-sm hover:bg-[#0494FC] hover:scale-[1.2] duration-500 transition-all">
               <FaYoutube color="white" />
             </Link>
           </div>
@@ -115,7 +115,7 @@ export default function Footer() {
 
             <div className="mt-5">
               {services.map((item, index) => (
-                <Link key={index} href={item.href} className="text-xs block mb-2 lg:text-sm hover:text-[#0494FC]">
+                <Link key={index} href={item.href} className="text-xs block mb-2 lg:text-sm hover:text-[#0494FC]" data-aos="fade-right" data-aos-delay={index * 50}>
                   {item.label}
                 </Link>
               ))}
@@ -126,7 +126,7 @@ export default function Footer() {
 
             <div className="mt-5">
               {support.map((item, index) => (
-                <Link key={index} href={item.href} className="text-xs block mb-2 lg:text-sm hover:text-[#0494FC]">
+                <Link key={index} href={item.href} className="text-xs block mb-2 lg:text-sm hover:text-[#0494FC]" data-aos="fade-right" data-aos-delay={index * 50}>
                   {item.label}
                 </Link>
               ))}
@@ -137,7 +137,7 @@ export default function Footer() {
 
             <div className="mt-5">
               {company.map((item, index) => (
-                <Link key={index} href={item.href} className="text-xs block mb-2 lg:text-sm hover:text-[#0494FC]">
+                <Link key={index} href={item.href} className="text-xs block mb-2 lg:text-sm hover:text-[#0494FC]" data-aos="fade-right" data-aos-delay={index * 50}>
                   {item.label}
                 </Link>
               ))}
@@ -145,8 +145,8 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="w-full bg-[#253950] px-6 py-8 md:flex md:justify-between md:items-center xl:px-12 lg:py-6 min-[1440px]:px-[7%]">
-        <p className="text-xs max-lg:text-center lg:text-sm">Copyright © {currentYear} techbiz, All rights reserved. Powered by MoxCreative.</p>
+      <div className="w-full bg-slate-800 px-6 py-8 md:flex md:justify-between md:items-center xl:px-12 lg:py-6 min-[1440px]:px-[7%]">
+        <p className="text-xs max-lg:text-center lg:text-sm">Copyright © {currentYear} Anihost, All rights reserved.</p>
         <div className="flex gap-5 max-md:mt-5 max-md:justify-center">
           {links.map((item, index) => (
             <Link key={index} href={item.href} className="text-xs lg:text-sm">
