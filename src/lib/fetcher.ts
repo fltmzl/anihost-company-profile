@@ -13,7 +13,6 @@ const fetcher = async ({ endpoint, locale = "id", ...options }: FetchOptions) =>
       "Content-Type": "application/json",
       ...options.headers,
     },
-    cache: "no-store",
   });
 
   if (!response.ok) {
