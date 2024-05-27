@@ -26,7 +26,7 @@ export default function HowItWorkCard({ title, variant = "primary", description,
 
       <div className="space-y-3">
         <span className="font-semibold lg:text-xl">{title}</span>
-        <p className={twMerge("text-sm", variant === "primary" ? "text-white" : "text-slate-400")}>{description}</p>
+        <p className={twMerge("text-xs", variant === "primary" ? "text-white" : "text-slate-400")}>{description}</p>
       </div>
     </div>
   );

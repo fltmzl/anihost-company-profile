@@ -1,0 +1,81 @@
+{
+  "Navbar": {
+    "Homepage": {
+      "title": "Homepage"
+    },
+    "AboutUs": {
+      "title": "About Us"
+    },
+    "Services": {
+      "Software": {
+        "title": "Software",
+        "description": "Transform your vision into reality with our expert software development team"
+      },
+      "Hosting": {
+        "title": "Hosting",
+        "description": "Explore our reliable hosting solutions designed to keep your website fast, secure, and always online"
+      },
+      "AllServices": {
+        "title": "All Services",
+        "description": "Explore our comprehensive range of services, from expert software development to reliable hosting solutions"
+      },
+      "title": "Services"
+    },
+    "ContactUs": {
+      "title": "Contact Us"
+    },
+    "Support": {
+      "title": "Support"
+    }
+  },
+  "Jumbotron": {
+    "button": "Get Started"
+  },
+  "DomainSection": {
+    "title": "Start your journey to an amazing website with the perfect domain",
+    "input": {
+      "placeholder": "Check your domain here",
+      "button": "Search Domain"
+    }
+  },
+  "DiscoverSection": {
+    "button": "Discover More"
+  },
+  "HostingSection": {
+    "title": "Delivering business solutions for the web and mobile world.",
+    "description": "Explore our reliable and affordable hosting services designed to meet your website's needs. From shared hosting to dedicated servers, we provide the perfect solution for every stage of your online journey.",
+    "HostingCard": {
+      "button": "Get Started"
+    }
+  },
+  "TechnologiesSection": {
+    "title": "Technologies",
+    "description": "Our Technologies & Frameworks"
+  },
+  "WhyChooseUsSection": {
+    "title": "Why Choose Us",
+    "description": "Revolutionize your perspective on technology with us."
+  },
+  "HowItWorksSection": {
+    "title": "How It Works",
+    "description": "Experience a new perspective on technology with our approach. We'll guide you from your initial ideas to an amazing website, transforming your vision into reality with expert support every step of the way."
+  },
+  "WhoWeAreSection": {
+    "button": "Learn More"
+  },
+  "AllServicesPage": {
+    "HostingServiceSection": {
+      "title": "Hosting Services",
+      "description": "Explore our reliable and affordable hosting services designed to meet your website's needs. From shared hosting to dedicated servers, we provide the perfect solution for every stage of your online journey.",
+      "button": "Disscuss Your Hosting Needs"
+    },
+    "SoftwareServiceSection": {
+      "title": "Software Development Services",
+      "description": "Discover our comprehensive software house services, tailored to transform your ideas into innovative solutions. From development to deployment, we deliver high-quality software to meet your business needs.",
+      "button": "Disscuss Your Software Needs"
+    }
+  },
+  "OurProductsSection": {
+    "title": "Our Digital Product Development Service"
+  }
+}

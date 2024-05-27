@@ -10,9 +10,10 @@ type HowItWorkCardProps = {
   className?: string;
   animationDelay?: number;
   arrowPosition?: "bottomToRight" | "right" | "left" | "bottomToLeft" | "none";
+  imageIconUrl: string;
 };
 
-export default function HowItWorkCardWithArrow({ title, variant = "primary", description, number = 1, animationDelay, className, arrowPosition = "bottomToRight" }: HowItWorkCardProps) {
+export default function HowItWorkCardWithArrow({ title, variant = "primary", description, number = 1, animationDelay, className, arrowPosition = "bottomToRight", imageIconUrl }: HowItWorkCardProps) {
   return (
     <div className={twMerge(arrowPosition === "right" && "flex items-end -mb-24", arrowPosition === "left" && "flex items-end", arrowPosition === "bottomToLeft" && "flex flex-col items-start -mt-24")}>
       <div className={twMerge("-rotate-[20deg] xl:rotate-0", arrowPosition !== "left" && "hidden")} data-aos="fade-up">
@@ -21,19 +22,20 @@ export default function HowItWorkCardWithArrow({ title, variant = "primary", des
 
       <div className={twMerge("p-7 lg:w-[400px] xl:w-[450px] flex gap-5", className)} data-aos="fade-up" data-aos-delay={animationDelay}>
         <div className="pb-10">
-          <div
+          {/* <div
             className={twMerge(
               "inline-block px-[10px] py-1 text-[11px] font-semibold border-2 border-blue-500 rounded-md relative after:content-[''] after:absolute after:bg-slate-300 after:w-full after:h-full after:top-1.5 after:-left-1.5 after:-z-10 after:rounded-sm",
               variant === "primary" ? "bg-white text-blue-600" : "bg-blue-600"
             )}
           >
             {number}
-          </div>
+          </div> */}
+          <Image src={imageIconUrl} alt="test" width={250} height={250} />
         </div>
 
         <div className="space-y-3">
-          <span className="font-semibold lg:text-xl">{title}</span>
-          <p className={twMerge("text-sm", variant === "primary" ? "text-white" : "text-slate-400")}>{description}</p>
+          <span className="font-semibold lg:text-lg">{title}</span>
+          <p className={twMerge("text-xs text-slate-400")}>{description}</p>
         </div>
       </div>
 

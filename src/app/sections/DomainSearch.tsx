@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import React from "react";
 
@@ -36,17 +37,18 @@ const domains = [
 ];
 
 export default function DomainSearch() {
+  const t = useTranslations("DomainSection");
+
   return (
-    // <div className="bg-[#0d9975] pb-10 px-10 py-8 lg:max-w-6xl lg:relative lg:-top-20 mx-auto md:rounded-2xl">
     <div className="bg-gradient-to-br from-sky-500/90 from-10% via-teal-500 to-teal-600 pb-10 px-10 py-8 lg:max-w-6xl lg:relative lg:-top-20 mx-auto md:rounded-2xl">
       <div className="flex flex-col md:flex-row gap-6">
         <div className="font-semibold text-xl">
-          <p>Start your journey to an amazing website with the perfect domain</p>
+          <p>{t("title")}</p>
         </div>
         <div className="basis-full">
           <div className="relative w-full">
-            <Input placeholder="Check your domain here" className="bg-white py-7 px-5" />
-            <Button className="bg-blue-500 shadow-2xl w-fit px-4 py-2 text-xs absolute right-3 -translate-y-1/2 border-0 top-1/2">Search Domain</Button>
+            <Input placeholder={t("input.placeholder")} className="bg-white py-7 px-5" />
+            <Button className="bg-blue-500 shadow-2xl w-fit px-4 py-2 text-xs absolute right-3 -translate-y-1/2 border-0 top-1/2">{t("input.button")}</Button>
           </div>
         </div>
       </div>

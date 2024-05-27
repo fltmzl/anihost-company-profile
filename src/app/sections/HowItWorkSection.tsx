@@ -3,12 +3,15 @@ import HowItWorkCard from "../components/HowItWorkCard";
 import { isNumberOdd } from "@/lib/utils";
 import HowItWorkCardWithArrow from "../components/HowItWorkCardWithArrow";
 import AnimationImage from "../components/AnimationImage";
+import { useTranslations } from "next-intl";
 
 type HowItWorkSectionProps = {
   items: WorkStep[];
 };
 
 export default function HowItWorkSection({ items }: HowItWorkSectionProps) {
+  const t = useTranslations("HowItWorksSection");
+
   const getArrowPosition = (index: number) => {
     switch (index) {
       case 0:
@@ -26,12 +29,29 @@ export default function HowItWorkSection({ items }: HowItWorkSectionProps) {
     }
   };
 
+  const getImageIcon = (index: number) => {
+    switch (index) {
+      case 0:
+        return `/images/how-1.png`;
+      case 1:
+        return `/images/how-2.png`;
+      case 2:
+        return `/images/how-3.png`;
+      case 3:
+        return `/images/how-4.png`;
+      case 4:
+        return `/images/how-5.png`;
+      default:
+        return `/images/how-1.png`;
+    }
+  };
+
   return (
     <section className="container py-10">
       <div className="text-center space-y-5">
-        <h2 data-aos="fade-up">How it works</h2>
-        <p className="text-sm text-slate-400 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="150">
-          Experience a new perspective on technology with our approach. We&apos;ll guide you from your initial ideas to an amazing website, transforming your vision into reality with expert support every step of the way.
+        <h2 data-aos="fade-up">{t("title")}</h2>
+        <p className="text-sm text-slate-400 max-w-3xl mx-auto !font-inter" data-aos="fade-up" data-aos-delay="150">
+          {t("description")}
         </p>
       </div>
 
@@ -55,6 +75,7 @@ export default function HowItWorkSection({ items }: HowItWorkSectionProps) {
                   animationDelay={index * 100}
                   className="rounded-2xl"
                   arrowPosition={getArrowPosition(index)}
+                  imageIconUrl={getImageIcon(index)}
                 />
               );
             }
@@ -62,7 +83,7 @@ export default function HowItWorkSection({ items }: HowItWorkSectionProps) {
         </div>
 
         <div className="flex justify-between items-center">
-          <div className="size-80 pl-10">
+          <div className="size-72 pl-10">
             <AnimationImage jsonUrl="/animations/cat-anim.json" />
           </div>
 
@@ -78,6 +99,7 @@ export default function HowItWorkSection({ items }: HowItWorkSectionProps) {
                   animationDelay={index * 100}
                   className="rounded-2xl"
                   arrowPosition={getArrowPosition(index)}
+                  imageIconUrl={getImageIcon(index)}
                 />
               );
             }
@@ -97,6 +119,7 @@ export default function HowItWorkSection({ items }: HowItWorkSectionProps) {
                   animationDelay={index * 100}
                   className="rounded-2xl"
                   arrowPosition={getArrowPosition(index)}
+                  imageIconUrl={getImageIcon(index)}
                 />
               );
             }

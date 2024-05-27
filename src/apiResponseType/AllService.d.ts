@@ -8,6 +8,8 @@ type ServiceProduct = {
 
 type AllService = {
   pageInfo: PageInfo;
+  serviceHero: PageHero;
+  services: Service[];
   hostingProducts: ServiceProduct[];
   cta: Cta[];
   tools: Tool[];
