@@ -1,8 +1,8 @@
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
-import React, { useState } from "react";
-import { constants } from "../utils/constants";
+import React, { useTransition } from "react";
 import AnimationImage from "../components/AnimationImage";
+import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 type JumbotronProps = { title: string; description: string; text: string; image: string };
 
@@ -12,6 +12,8 @@ export default function Jumbotron({
   description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, distinctio atque? Dolorem enim, voluptate, asperiores maxime esse dicta praesentium officia nostrum iusto numquam at. Minima.",
   image = "/images/imac.png",
 }: JumbotronProps) {
+  const t = useTranslations("Jumbotron");
+
   return (
     <section className={`px-5 py-10 relative after:content-[''] after:absolute after:inset-0 after:bg-blue-200 after:-z-10 after:bg-[url('/images/bg-jumbotron-3.jpg')] after:brightness-[0.25] after:bg-cover after:bg-center`}>
       <div className="lg:flex lg:gap-10 min-h-[650px] lg:h-screen lg:max-h-[800px] container items-center">
@@ -27,9 +29,9 @@ export default function Jumbotron({
           </p>
 
           <div data-aos="fade-up">
-            <a href="#">
-              <Button className="lg:w-fit">Get Started</Button>
-            </a>
+            <Link href="#">
+              <Button className="lg:w-fit">{t("button")}</Button>
+            </Link>
           </div>
         </div>
 

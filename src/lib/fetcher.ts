@@ -2,10 +2,11 @@ const BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
 
 interface FetchOptions extends RequestInit {
   endpoint: string;
+  locale?: Locale;
 }
 
-const fetcher = async ({ endpoint, ...options }: FetchOptions) => {
-  const url = `${BASE_URL}${endpoint}`;
+const fetcher = async ({ endpoint, locale = "id", ...options }: FetchOptions) => {
+  const url = `${BASE_URL}${endpoint}?locale=${locale}`;
   const response = await fetch(url, {
     ...options,
     headers: {

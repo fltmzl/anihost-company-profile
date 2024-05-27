@@ -10,7 +10,5 @@ type About = {
   pageInfo: PageInfo;
   pageHero: PageHero;
   clients: Client[];
-  whatWeDo: WhatWeDo[];
   sellingPoints: SellingPoints[];
-  employees: Employee[];
 };

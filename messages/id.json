@@ -1,0 +1,81 @@
+{
+  "Navbar": {
+    "Homepage": {
+      "title": "Beranda"
+    },
+    "AboutUs": {
+      "title": "Tentang Kami"
+    },
+    "Services": {
+      "Software": {
+        "title": "Software",
+        "description": "Wujudkan ide Anda menjadi kenyataan dengan tim software developer ahli kami"
+      },
+      "Hosting": {
+        "title": "Hosting",
+        "description": "Temukan solusi hosting kami yang dirancang untuk menjaga situs Anda tetap cepat, aman, dan selalu online"
+      },
+      "AllServices": {
+        "title": "Semua Layanan",
+        "description": "Jelajahi layanan lengkap kami, mulai dari pengembangan software dengan ahli hingga solusi hosting yang andal"
+      },
+      "title": "Layanan Kami"
+    },
+    "ContactUs": {
+      "title": "Kontak Kami"
+    },
+    "Support": {
+      "title": "Bantuan"
+    }
+  },
+  "Jumbotron": {
+    "button": "Mulai Sekarang"
+  },
+  "DomainSection": {
+    "title": "Mulailah perjalananmu menuju sebuah situs web yang menakjubkan dengan domain yang pas",
+    "input": {
+      "placeholder": "Cek domainmu disini",
+      "button": "Cari Domain"
+    }
+  },
+  "DiscoverSection": {
+    "button": "Lebih Lanjut"
+  },
+  "HostingSection": {
+    "title": "Memberikan solusi bisnis untuk dunia web dan mobile.",
+    "description": "Telusuri layanan hosting kami yang handal dan terjangkau yang dirancang untuk memenuhi kebutuhan situs web Anda. Dari hosting shared hingga server, kami menyediakan solusi yang sempurna untuk setiap tahap perjalanan online Anda.",
+    "HostingCard": {
+      "button": "Get Started"
+    }
+  },
+  "TechnologiesSection": {
+    "title": "Teknologi",
+    "description": "Teknologi & Framework Kami"
+  },
+  "WhyChooseUsSection": {
+    "title": "Kenapa Anda Perlu Memilih Kami",
+    "description": "Kembangkan pandangan Anda tentang Teknologi bersama Kami"
+  },
+  "HowItWorksSection": {
+    "title": "Bagaimana Kami Bekerja",
+    "description": "Jelajahi perspektif baru dalam dunia teknologi bersama pendekatan kami. Mulai dari gagasan awal hingga sebuah situs web yang menakjubkan, kami akan mengubah impian Anda menjadi kenyataan dengan dukungan ahli di setiap langkahnya."
+  },
+  "WhoWeAreSection": {
+    "button": "Kenali Kami Lebih Lanjut"
+  },
+  "AllServicesPage": {
+    "HostingServiceSection": {
+      "title": "Layanan Hosting",
+      "description": "Jelajahi layanan hosting yang andal dan terjangkau yang dirancang untuk memenuhi kebutuhan situs web Anda. Mulai dari shared hosting hingga server, kami menyediakan solusi yang sempurna untuk setiap tahap perjalanan online Anda.",
+      "button": "Diskusikan Kebutuhan Hosting Anda"
+    },
+    "SoftwareServiceSection": {
+      "title": "Layanan Pengembangan Software",
+      "description": "Temukan layanan software kami, yang disesuaikan untuk mengubah ide Anda menjadi solusi inovatif. Dari pengembangan hingga implementasi, kami menegmbangkan software berkualitas tinggi untuk memenuhi kebutuhan bisnis Anda.",
+      "button": "Diskusikan Kebutuhan Software Anda"
+    }
+  },
+  "OurProductsSection": {
+    "title": "Layanan Pengembangan Produk Digital Kami"
+  }
+}

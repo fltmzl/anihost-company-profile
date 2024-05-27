@@ -1,11 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import SmallServiceCard from "../components/SmallServiceCard";
-import { PiGlobeBold } from "react-icons/pi";
-import { FaLightbulb } from "react-icons/fa6";
-import { FaLaptopCode, FaPencilRuler } from "react-icons/fa";
 import MediumServiceCard from "../components/MediumServiceCard";
-import { MdLeaderboard, MdSecurity } from "react-icons/md";
 import HomeDiscoveryIcon from "@/assets/icons/HomeDiscoveryIcon";
 import HomeAftercareIcon from "@/assets/icons/HomeAftercareIcon";
 import HomeRocketIcon from "@/assets/icons/HomeRocketIcon";
@@ -20,16 +16,12 @@ export default function OurServiceSection({ items, pageHero }: OurServiceSection
     switch (index) {
       case 0:
         return <HomeDiscoveryIcon />;
-        return "/icons/home-discovery.svg";
       case 1:
         return <HomeAftercareIcon />;
-        return "/icons/home-aftercare.svg";
       case 2:
         return <HomeRocketIcon />;
-        return "/icons/home-rocket.svg";
       default:
         return <HomeDiscoveryIcon />;
-        return "/icons/home-discovery.svg";
     }
   };
 
